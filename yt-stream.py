@@ -5,11 +5,14 @@
 # Author: Nils Hellerhoff
 #
 # This script uses youtube-dl to stream a Youtube-Video to vlc 
-# It automatically picks 1080p60 h264 codec
+# It automatically picks 1080p60, this can be customized below
 # Usage: stream.py <youtube-url>
 
-audioformat = "251"
-videoformat = "299"
+videoresolution = "1080p60"
+videocodec = "avc1.64002a"
+
+audiobitrate = 160
+audiocodec = "opus"
 
 vlcexec = "vlc"
 
@@ -29,8 +32,8 @@ info = ydl.extract_info(url, download=False)
 
 uploader = info["uploader"]
 title = info["title"]
-video = [format["url"] for format in info["formats"] if format["format_id"] == videoformat][0]
-audio = [format["url"] for format in info["formats"] if format["format_id"] == audioformat][0]
+video = [format["url"] for format in info["formats"] if format["format_note"] == videoresolution and format["vcodec"] == videocodec][0]
+audio = [format["url"] for format in info["formats"] if format["acodec"] == audiocodec and format["abr"] == audiobitrate][0]
 
 subprocess.Popen([
     vlcexec,
