@@ -2,7 +2,7 @@
 Collection of various scripts, mainly linux
 
 ## yt-stream<span>.py
-Play a Youtube-stream in vlc from commandline. Defaults to 1080p60 h264. This script is useful if you cant use hardware acceleration in the browser, but vlc works with it.
+Play a Youtube-stream in vlc from commandline. Uses only 1080p60 h264 at the moment. This script is useful if you cant use hardware acceleration in the browser, but vlc works with it. On my pc CPU usage dropped from ~100% to 20-30%
 
 Requirements:
 - Python 3
