@@ -1,2 +1,2 @@
-# scripts
-Collection of various scripts
+# Scripts
+Collection of various scripts, mainly linux
