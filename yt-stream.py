@@ -1,12 +1,18 @@
 #! /usr/bin/env python3
-# Stream to vlc
+
+#################################################################
+# Stream Youtube to vlc
 # 
-# Date: 4.12.2020
-# Author: Nils Hellerhoff
-#
+# Author: Nils Hellerhoff <nils.hellerhoff@gmail.com>
+# Date: 2020-12-04
+# 
 # This script uses youtube-dl to stream a Youtube-Video to vlc 
 # It automatically picks 1080p60, this can be customized below
 # Usage: stream.py <youtube-url>
+# 
+# Requirements:
+# - youtube-dl (pip install youtube-dl)
+################################################################
 
 videoresolution = "1080p60"
 videocodec = "avc1.64002a"

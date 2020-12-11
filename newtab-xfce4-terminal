@@ -1,10 +1,18 @@
 #! /bin/sh
+
+#################################################################
+# Open a new tab in xfce4-terminal
+# 
+# Author: Nils Hellerhoff <nils.hellerhoff@gmail.com>
+# Date: 2020-12-11
+#
 # xfce-terminal has an option --tab, which will open a new tab in an existing
 # window. Oddly though, when used without any open windows, `xterm --tab` will
-# cause a new window with two (!) tabs to be opened. This issue is being tracked:
+# cause a new window with two (!) tabs to be opened, see:
 # https://gitlab.xfce.org/apps/xfce4-terminal/-/issues/13
 # This script just prevents xfce4-terminal from opening two tabs, if no terminal 
 # is open yet.
+################################################################
 
 otp=$(pgrep xfce4-terminal)
 

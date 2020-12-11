@@ -1,4 +1,11 @@
 #!/bin/sh
+
+#################################################################
+# Open a new tab in Gnome-Terminal
+# 
+# Author: Nils Hellerhoff <nils.hellerhoff@gmail.com>
+# Date: 2020-12-11 
+#
 # Gnome-Terminal does not have a new-tab option. Therefore this script will
 # check wheter gnome-terminal is running, focus the window and then execute
 # Ctrl+Shift+t in the window, which will open a new tab
@@ -6,6 +13,7 @@
 # Requirements:
 # - wmtctrl
 # - xdotool
+################################################################
 
 otp=$(pgrep gnome-terminal)
 

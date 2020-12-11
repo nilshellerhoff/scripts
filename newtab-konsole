@@ -1,4 +1,19 @@
 #!/bin/sh
+
+#################################################################
+# Open a new tab in Konsole
+# 
+# Author: Nils Hellerhoff <nils.hellerhoff@gmail.com>
+# Date: 2020-12-11
+# 
+# Konsole has a `--new-tab` option, this though wont focus the terminal. This
+# script uses wmctrl to focus konsole
+# 
+# Requirements:
+# - wmctrl
+################################################################
+
+
 # Konsole has a `--new-tab` option, this though wont focus the terminal. This
 # script uses wmctrl to focus konsole
 # 
