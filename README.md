@@ -5,7 +5,7 @@ Collection of various scripts, mainly linux
 My workflow using terminals is to open one terminal window but with multiple tabs. These scripts enable this functionality in common linux terminal emulators
 
 #### gnome-terminal
-Gnome-Terminal does not have a new-tab option. Therefore this script will check wheter gnome-terminal is running, focus the window and then execute Ctrl+Shift+t in the window, which will open a new tab
+Gnome-Terminal does not have a new-tab option. Therefore this script will check whether gnome-terminal is running, focus the window and then execute Ctrl+Shift+t in the window, which will open a new tab
 
 Requires `wmctrl` and `xdotool`.
 
