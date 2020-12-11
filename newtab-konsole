@@ -1,0 +1,9 @@
+#!/bin/sh
+# Konsole has a `--new-tab` option, this though wont focus the terminal. This
+# script uses wmctrl to focus konsole
+# 
+# Requirements:
+# - wmctrl
+
+konsole --new-tab
+wmctrl -a "Konsole"
