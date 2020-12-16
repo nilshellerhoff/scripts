@@ -12,7 +12,7 @@ Requires `wmctrl` and `xdotool`.
 #### konsole
 Konsole has a `new-tab` option, which doesn't bring the window in focus though.
 
-Requires `xdotool`.
+Requires `wmctrl`.
 
 #### xfce4-terminal
 The XFCE Terminal does have an option `--tab` to open a new tab, but when no terminal is open, this causes a window with two tabs to be opened (see https://gitlab.xfce.org/apps/xfce4-terminal/-/issues/13)
