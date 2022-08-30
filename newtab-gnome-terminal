@@ -15,13 +15,24 @@
 # - xdotool
 ################################################################
 
-otp=$(pgrep gnome-terminal)
+# get the id of the current desktop
+currDesktopId=$(wmctrl -d | grep "*" | head -c 1)
 
-if [ "$?" -eq 0 ]; then
-	str="gnome-terminal-server.Gnome-terminal"
-	wmctrl -x -a $str
+# check whether there is a gnome-terminal open on the current desktop
+otp=$(wmctrl -l -x | grep "$currDesktopId gnome-terminal-server.Gnome-terminal")
+
+if [ -z "$otp" ]; then
+    # we have no gnome-terminal open on the current desktop
+    # create new window
+    gnome-terminal
+else
+    # get the window id of gnome-terminal on the current desktop
+    windowId=$(echo $otp | cut -d' ' -f1)
+
+    # activate the window with the id $windowId
+	wmctrl -x -a -i $windowId
+
+    # wait shortly and open a new tab
 	sleep 0.3
 	xdotool key --clearmodifiers Ctrl+Shift+t
-else
-	gnome-terminal
 fi
