@@ -30,7 +30,7 @@ else
     windowId=$(echo $otp | cut -d' ' -f1)
 
     # activate the window with the id $windowId
-	wmctrl -x -a -i $windowId
+	wmctrl -i -a $windowId
 
     # wait shortly and open a new tab
 	sleep 0.3
