@@ -2,12 +2,15 @@
 
 #################################################################
 # Open a new tab in Konsole
-# 
+# The option "Run all Konsole windows in a single process" has
+# to be enabled!
+#
 # Author: Nils Hellerhoff <nils.hellerhoff@gmail.com>
 # Date: 2020-12-11
+# Change: 2023-05-06
 # 
 # Konsole has a `--new-tab` option, this though wont focus the terminal. This
-# script uses wmctrl to focus konsole
+# script uses wmctrl to focus konsole.
 # 
 # Requirements:
 # - wmctrl
